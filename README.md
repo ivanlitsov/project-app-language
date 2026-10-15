@@ -22,34 +22,3 @@
 После изменения словаря или настроек занятий лента начинается заново. Смена темы сохраняет текущую карточку. Если изменить слово
 или перевод, его освоение сбрасывается; изменение примера сохраняет освоение.
 Сброс освоения в настройках сохраняет свои слова и настройки.
-
-## Запуск
-
-Нужны Flutter 3.44.4 (Dart 3.12.2) или совместимая более новая версия,
-Android SDK и JDK 17 для сборки Android.
-
-```sh
-flutter pub get
-flutter run
-```
-
-Просмотр в браузере: `flutter run -d chrome`.
-
-## Проверка и сборка
-
-```sh
-flutter analyze
-flutter test
-flutter build apk --debug
-```
-
-Отладочный APK: `build/app/outputs/flutter-apk/app-debug.apk`.
-
-## Исходники
-
-- `lib/data/initial_words.dart` — начальный набор из 48 слов.
-- `lib/models/feed_entry.dart` — случайный выбор карточек и вариантов ответа.
-- `lib/models/learning_progress.dart` — освоение слова и настройки, включая тему.
-- `lib/models/word.dart` — модель слова.
-- `lib/screens/` — лента, словарь, редактор слова и настройки.
-- `lib/services/progress_store.dart` — локальное хранение слов, освоения и настроек.
